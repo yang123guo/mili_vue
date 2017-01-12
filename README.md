@@ -7,7 +7,8 @@ vue2 vue-router ES6 vuex vue-axios 以及一些周边插件<br />
 
 ## 运行
 ``` bash
-npm run dev   ----- localhost:8899
+npm install   ----- 安装依赖
+npm run dev   ----- 在localhost:8899运行
 ```
 
 ## 目录结构
@@ -69,4 +70,5 @@ npm run dev   ----- localhost:8899
 
 ### 备注
 我的json文件在php环境下，你可以访问本地的json<br /> 
-个人开发在自己新建的分支上，最后统一合并到origin的master分支 
+个人开发在自己新建的分支上，最后统一合并到origin的master分支<br />
+一些设计图我暂先放到了src/assets/images中了 
