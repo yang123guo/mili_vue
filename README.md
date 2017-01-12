@@ -2,8 +2,8 @@
 一个模仿app"米粒夺宝"的练习项目（米粒夺宝App  版本2.1.8）
 
 ## 使用的技术栈
-vue2 vue-router ES6 vuex vue-axios 以及一些周边插件
-插件 例如：vue-
+vue2 vue-router ES6 vuex vue-axios 以及一些周边插件<br />
+插件 例如：vue-axios vue-swipe
 
 ## 运行
 ``` bash
@@ -68,5 +68,5 @@ npm run dev   ----- localhost:8899
 
 
 ### 备注
-我的json文件在php环境下，你可以访问本地的json 
+我的json文件在php环境下，你可以访问本地的json<br /> 
 个人开发在自己新建的分支上，最后统一合并到origin的master分支 
