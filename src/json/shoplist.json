@@ -1,0 +1,103 @@
+{
+    "retcode": 1,
+    "retmsg": "查询成功",
+    "data": {
+        "total": 2,
+        "records": 15,
+        "page": 1,
+        "rows": [
+            {
+                "id": 13,
+                "sid": 13,
+                "remainmember": 50,
+                "joinedmember": 50,
+                "totalmember": 100,
+                "title": "Kickstarter 3Doodler2.0 3D画笔",
+                "cover": "http://img0.imgtn.bdimg.com/it/u=3647965459,1629578673&fm=21&gp=0.jpg"
+            },
+            {
+                "id": 14,
+                "sid": 13,
+                "remainmember": 50,
+                "joinedmember": 100,
+                "totalmember": 995,
+                "title": "WeCoach Pro智能运动私教",
+                "cover": "http://img0.imgtn.bdimg.com/it/u=3647965459,1629578673&fm=21&gp=0.jpg"
+            },
+            {
+                "id": 15,
+                "sid": 13,
+                "remainmember": 595,
+                "joinedmember":150,
+                "totalmember": 995,
+                "title": "Kickstarter 3Doodler2.0 3D画笔",
+                "cover": "http://cimg.163.com/2004/2004/11/7/20041107194340c3b27.jpg"
+            },
+            {
+                "id": 16,
+                "sid": 13,
+                "remainmember": 365,
+                "joinedmember": 0,
+                "totalmember": 995,
+                "title": "睿讴rrioo office1 ocup智能水杯",
+                "cover": "http://cimg.163.com/2004/2004/11/7/20041107194340c3b27.jpg"
+            },
+            {
+                "id": 17,
+                "sid": 13,
+                "remainmember": 195,
+                "joinedmember": 10,
+                "totalmember": 995,
+                "title": "Kickstarter 3Doodler2.0 3D画笔",
+                "cover": "http://sztqb.sznews.com/res/1/641/2016-12/29/B04/res01_attpic_brief.jpg"
+            },
+            {
+                "id": 19,
+                "sid": 18,
+                "remainmember": 595,
+                "joinedmember": 20,
+                "totalmember": 995,
+                "title": "WeCoach Pro智能运动私教",
+                "cover": "http://sztqb.sznews.com/res/1/641/2016-12/29/B04/res01_attpic_brief.jpg"
+            },
+            {
+                "id": 20,
+                "sid": 13,
+                "remainmember": 495,
+                "joinedmember": 200,
+                "totalmember": 995,
+                "title": "睿讴rrioo office1 ocup智能水杯",
+                "cover": "http://y3.ifengimg.com/f4871d0d13e2914c/2013/1125/rdn_5292b57c3f013.jpg"
+            },
+            {
+                "id": 12,
+                "sid": 13,
+                "remainmember": 995,
+                "joinedmember": 100,
+                "totalmember": 995,
+                "title": "Kickstarter 3Doodler2.0 3D画笔",
+                "cover": "http://y3.ifengimg.com/f4871d0d13e2914c/2013/1125/rdn_5292b57c3f013.jpg"
+            },
+            {
+                "id": 11,
+                "sid": 13,
+                "remainmember": 515,
+                "joinedmember": 0,
+                "totalmember": 995,
+                "title": "WeCoach Pro智能运动私教",
+                "cover": "http://culture.people.com.cn/mediafile/201202/13/F201202131730429921312384.jpg"
+            },
+            {
+                "id": 10,
+                "sid": 13,
+                "remainmember": 333,
+                "joinedmember": 90,
+                "totalmember": 995,
+                "title": "睿讴rrioo office1 ocup智能水杯",
+                "cover": "http://culture.people.com.cn/mediafile/201202/13/F201202131730429921312384.jpg"
+            }
+
+
+        ]
+    }
+}

@@ -1,0 +1,132 @@
+/**
+* 1px 解决方案 
+* https://github.com/huanghuiquan/1px.git
+* 用法：标签里面写上border border-top/right/left/bottom/all中一个代表某一边或者所有边
+*.border（统一设置border的颜色）
+    set-border-color(#55555d)
+    
+ .border-left（只有左边线，且设置左边线的颜色）
+    set-border-color(red)
+ 
+ .box-1 （另加的一个类名，设置其他border属性）
+    set-border-radius(80px)
+    
+*注意：::after 伪元素被强行占用，可能与clearfix冲突，小心处理可以避免
+       元素的 position 属性被设置为relative， 可能影响子元素的定位，要小心
+*/ 
+
+border-default-color = #000
+
+absolute(t, r, b, l)
+    position: absolute
+    top: t
+    right: r
+    bottom: b
+    left: l
+
+// 设置边框颜色
+set-border-color(color)
+    border-color: color
+
+    &::after
+        border-color: color
+
+// 设置边框颜色
+set-border-radius(radius)
+    border-radius: radius
+
+    &::after
+        border-radius: radius
+
+// 如果device-pixel-ratio === 1时不需要做缩放，使用最原始的方式，避免浪费cpu
+.border
+    border: 0 solid border-default-color
+
+    &-top
+        border-top-width: 1px
+
+    &-right
+        border-right-width: 1px
+
+    &-bottom
+        border-bottom-width: 1px
+
+    &-left
+        border-left-width: 1px
+
+    &-all
+        border-width: 1px
+
+@media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio: 1.5)
+
+    .border
+        position: relative
+        border: none !important
+
+        &::after
+            content: ' '
+            display: block
+            absolute: 0 -33.33% -33.33% 0
+            border: 0 solid border-default-color
+            transform-origin: 0 0
+            pointer-events: none // 解决挡住点击事件的问题
+            transform: scale(.75)
+            width: 133.33%
+            box-sizing: border-box
+
+        &-top
+            &::after
+                border-top-width: 1px
+
+        &-right
+            &::after
+                border-right-width: 1px
+
+        &-bottom
+            &::after
+                border-bottom-width: 1px
+
+        &-left
+            &::after
+                border-left-width: 1px
+
+        &-all
+            &::after
+                border-width: 1px
+
+@media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio: 2)
+
+    .border
+        position: relative
+        border: none !important
+
+        &::after
+            content: ' '
+            display: block
+            absolute: 0 -100% -100% 0
+            border: 0 solid border-default-color
+            transform-origin: 0 0
+            pointer-events: none // 解决挡住点击事件的问题
+            transform: scale(.5)
+            width: 200%
+            box-sizing: border-box
+
+        &-top
+            &::after
+                border-top-width: 1px
+
+        &-right
+            &::after
+                border-right-width: 1px
+
+        &-bottom
+            &::after
+                border-bottom-width: 1px
+
+        &-left
+            &::after
+                border-left-width: 1px
+
+        &-all
+            &::after
+                border-width: 1px
