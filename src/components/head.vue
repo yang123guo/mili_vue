@@ -1,5 +1,5 @@
 <template>
-    <header class="header_wrap" flex="" :style="{color: titleColor}">
+    <section class="header_wrap" flex="" :style="{color: titleColor}">
         <div class="back_arrow" flex-box="0">
             <slot name="left"></slot>
         </div>
@@ -7,7 +7,7 @@
         <div class="share back_arrow" flex-box="0">
             <slot name="right"></slot>
         </div>
-    </header>
+    </section>
 </template>
 
 <script >
@@ -29,24 +29,24 @@
 </script>
 
 <style lang="stylus" scoped>
-@import '../../assets/css/common.styl';
+@import '../assets/css/common.styl';
 .header_wrap
     width 100% 
-    height 40px
+    height $headH
     background-color $headbg
     clear both
   
     .back_arrow
-        height 40px
+        height $headH
         width 56px
         color $titleCor
         font-size 14px
         text-align center
-        line-height 40px
+        line-height $headH
   
     .title 
-        height 40px
-        line-height 40px
+        height $headH
+        line-height $headH
         text-align center
         font-size 18px
         font-weight bold

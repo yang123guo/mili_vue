@@ -12,7 +12,7 @@
     set-border-radius(80px)
     
 *注意：::after 伪元素被强行占用，可能与clearfix冲突，小心处理可以避免
-       元素的 position 属性被设置为relative， 可能影响子元素的定位，要小心
+       元素的 position 属性被设置为 relative， 可能影响子元素的定位，要小心
 */ 
 
 border-default-color = #000
@@ -31,7 +31,7 @@ set-border-color(color)
     &::after
         border-color: color
 
-// 设置边框颜色
+// 设置边框圆角
 set-border-radius(radius)
     border-radius: radius
 
@@ -56,6 +56,16 @@ set-border-radius(radius)
 
     &-all
         border-width: 1px
+        
+
+set-boder-TL(cor1, cor2)
+    border-color-top: cor1
+    border-color-left: cor2
+
+    &::after
+        border-color-top: cor1
+        border-color-left: cor2
+        
 
 @media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio: 1.5)
 

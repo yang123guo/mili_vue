@@ -15,6 +15,48 @@ var port = process.env.PORT || config.dev.port
 var proxyTable = config.dev.proxyTable
 
 var app = express()
+
+/**
+* 此处是通过node来制作接口
+* 开始。。
+*/
+var dataList = require('../src/json/data.json')
+var seller = appData.seller;
+var goods = appData.goods;
+var ratings = appData.ratings;
+
+var apiRoutes = express.Router();
+
+apiRoutes.get('/seller', function (req, res) {
+  res.json({
+    state: 1,
+    msg : 'Ok',
+    data: seller
+  });
+});
+
+apiRoutes.get('/goods', function (req, res) {
+  res.json({
+    state: 1,
+    msg : 'Ok',
+    data: goods
+  });
+});
+
+apiRoutes.get('/ratings', function (req, res) {
+  res.json({
+    state: 1,
+    msg : 'Ok',
+    data: ratings
+  });
+});
+
+app.use('/api', apiRoutes);
+
+/**
+* 结束。。
+*/
+
 var compiler = webpack(webpackConfig)
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {

@@ -1,189 +1,16 @@
 <style lang="stylus">
 @import '../../assets/css/common.styl';
-    
-    ul.home_tab
-        width 100%
-        height 34px
-        background-color $blockbg
-                
-        >li                       
-            line-height 34px
-            text-align center            
-        
-            a.home_price
-                position relative
-                display block
-              
-                &:before
-                    content ''
-                    position absolute
-                    display block
-                    top 9px
-                    right 20%
-                    width 0
-                    height 0
-                    border-left 4px solid transparent
-                    border-right 4px solid transparent
-                    border-bottom 6px solid #555
-                    
-                &:after
-                    content ''
-                    position absolute
-                    display block
-                    bottom 9px
-                    right 20%
-                    width 0
-                    height 0
-                    border-left 4px solid transparent
-                    border-right 4px solid transparent
-                    border-top 6px solid #555  
-                        
-            a.markUp
-                &:before
-                    border-bottom 6px solid $headbg !important
-            a.markDown
-                &:after
-                    border-top 6px solid $headbg !important
-                    
-        >li.active
-            >a
-                color $headbg
-    
-    ul.product_container 
-            min-height 45px
-            margin-bottom 51px
-            
-        li.border-top
-            set-border-color(red)
-        
-        .product_item:nth-child(odd)
-            &:before
-                position absolute
-                content ' '
-                top 0
-                right 0
-                width 1px
-                height 100%
-                border-right 1px solid blue 
-                transform scaleX(.5)
-                transform-origin 0 0
 
-        .product_item 
-            width 50%
-            position relative
-            float left
-            box-sizing border-box
-            background-color #fff
-            padding 10px
-            border-color red
-            
-            .item_img
-                width 100%
-                height 180px
-                
-                img[lazy=loading] {
-                    width 100%
-                    height 100%
-                  }
-                
-                img 
-                    width 100%
-                    height 100%
-                
-            .item_info
-                padding-top 5px
-                width 100%
-                height 42px
-                font-size 14px
-                color #333
-                line-height 18px
-        
-            .item_msg
-                
-                width: 100%
-                text-align center                
-                display flex
-                -webkit-box-align center
-                -webkit-align-items center
-                padding6px 0
-
-
-               .state
-                    flex 1
-                    text-alignleft
-
-                    .percentage 
-                        font-size 10px 
-                    .progress
-                        display block
-                        overflow hidden
-                        width 80%
-                        height 6px
-                        border-radius3px
-                        background #ddd
-                       
-                    .ongoing
-                        display block
-                        height 6px
-                        background #ff6666
-
-                .btn
-                    .add
-                        display  block
-                        padding 2px 0
-                        width  60px
-                        border-color  #ff6666
-                        border-style  solid
-                        border-width 1px
-                        border-radius 3px
-                        color #ff6666 
-             
 </style>
 <template>
-<main class="home_page">
-    <!-- 头部导航条 -->
-    <head-bar :title="title"></head-bar>
+<section class="home_page">
 
-     <!-- 轮播广告 -->
-     <swipe :swipe-data="imgLists" v-if="!loading"></swipe>     
-    
-    <!-- tab切换区域 -->
-    <ul class="home_tab" flex="box:mean" id="home_tab" v-if="!loading">        
-        <li v-for="(item, index) in tabLists" @click="sort(item.index)" :class="{active : index === activeIndex }">
-            <a>{{item.value}}</a>  
-        </li>
-    </ul>
-    
-    <!-- 产品展示区 -->
-    <ul class="product_container clear" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="80" v-if="!loading">
-        <li class="product_item border border-top" v-for="(item, index) in shopList">
-            <div class="item_img">
-                <img v-lazy="item.cover" >
-            </div>
-            <p class="item_info">
-                {{item.title}}
-            </p>
-            <div class="item_msg">                
-                <p class="state">
-                    <span class="percentage">开奖进度 {{progress(item.remainmember, item.totalmember)}}</span>
-                    <span class="progress"> <i class="ongoing" :style="{width :progress(item.remainmember, item.totalmember)}"></i></span>
-                </p>
-                <p class="btn">
-                    <span class="add" @click.stop.prevent="addCart">参与</span>
-                </p>                
-            </div>            
-        </li>
-    </ul>
-    
-    <loading :show='loading'></loading>
-
-</main>
+</section>
 </template>
 <script>
-import headBar from '../common/head';
-import Swipe from '../../components/swipe';
-import CONST from '../../common/constant';
-import Loading from '../../components/loading';
+// import Swipe from '../../components/swipe';
+// import CONST from '../../common/constant';
+// import Loading from '../../components/loading';
 
 const imgdata = 
     [{
@@ -200,7 +27,7 @@ const imgdata =
 export default {
     data() {
         return {
-            title : '米粒夺宝',
+            /*title : '米粒夺宝',
             tabLists : [],
             activeIndex : 0,
             loading : false,            
@@ -208,21 +35,21 @@ export default {
             imgLists : [],  
             shopList : [],
             page : 1,
-            busy : false, // 开启下拉添加数据        
+            busy : false, // 开启下拉添加数据      */  
         }
     },
     computed : {
         
     },
     components : {
-        headBar,
+       /* headBar,
         Swipe,
-        Loading
+        Loading*/
     },
     created() {    
-        this.tabLists = CONST.TAB_DATA
+        /*this.tabLists = CONST.TAB_DATA
         this.imgSwipe();
-        this.getAjaxData(); 
+        this.getAjaxData(); */
     },    
     mounted(){
         this.$nextTick(() => {
@@ -235,7 +62,7 @@ export default {
     },
 
     methods : {          
-        loadMore() {
+        /*loadMore() {
             // 原理：busy = false的时候，开始监听滚动条，
             // 当小于distance="80"开始执行loadMore事件           
 
@@ -283,7 +110,7 @@ export default {
         },
         addCart() {
 
-        }
+        }*/
     }
 }
     

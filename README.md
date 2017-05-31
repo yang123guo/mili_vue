@@ -1,5 +1,5 @@
 # mili_vue
-一个模仿app"米粒夺宝"的练习项目（米粒夺宝App  版本2.1.8）
+一个模仿app"米粒夺宝"的练习项目（米粒夺宝App  版本2.2.0）
 
 ## 使用的技术栈
 vue2 vue-router ES6 vuex vue-axios 以及一些周边插件<br />
