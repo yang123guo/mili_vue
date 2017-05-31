@@ -5,7 +5,7 @@
 
 <template>
     <div id="app" class="app">
-        <!-- 头部 -->
+        <!-- 头部Title -->
         <header class="app-header">
             <head-bar></head-bar>  
         </header>
@@ -17,7 +17,7 @@
             </keep-alive>
         </main>  
 
-        <!-- 导航 -->   
+        <!-- 底部导航 -->   
         <footer class="app-footer">
             <foot-bar v-if="isIndex"></foot-bar>
         </footer> 
@@ -27,17 +27,19 @@
 </template>
 <script>
 import headBar from './components/head';
+import footBar from './components/foot';
 
 export default {
     name: 'app',
     data () {
         return {  
-            isIndex : false,
+            isIndex : true,
             loadShow : false,
         }
     },
     components: {
-        headBar
+        headBar,
+        footBar
     }  
 }
 </script>
