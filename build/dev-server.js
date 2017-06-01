@@ -20,34 +20,43 @@ var app = express()
 * 此处是通过node来制作接口
 * 开始。。
 */
-var dataList = require('../src/json/data.json')
-var seller = appData.seller;
-var goods = appData.goods;
-var ratings = appData.ratings;
+var appData = require('../src/json/data.json');
+var newsList = appData.newsList;
+var subscribe = appData.subscribe;
+var mine = appData.mine;
+var collectionList = appData.collectionList;
 
 var apiRoutes = express.Router();
 
-apiRoutes.get('/seller', function (req, res) {
+apiRoutes.get('/newsList', function (req, res) {
   res.json({
     state: 1,
-    msg : 'Ok',
-    data: seller
+    msg : '获取数据成功',
+    data: newsList
   });
 });
 
-apiRoutes.get('/goods', function (req, res) {
+apiRoutes.get('/mine', function (req, res) {
   res.json({
     state: 1,
-    msg : 'Ok',
-    data: goods
+    msg : '获取数据成功',
+    data: mine
   });
 });
 
-apiRoutes.get('/ratings', function (req, res) {
+apiRoutes.get('/subscribe', function (req, res) {
   res.json({
     state: 1,
-    msg : 'Ok',
-    data: ratings
+    msg : '获取数据成功',
+    data: subscribe
+  });
+});
+
+apiRoutes.get('/collectionList', function (req, res) {
+  res.json({
+    state: 1,
+    msg : '获取数据成功',
+    data: collectionList
   });
 });
 

@@ -1,0 +1,30 @@
+// 宽高
+wh($width = 100px, $height = 100px)
+    width: $width
+    height: $height
+
+// 字体大小和颜色    
+sc($size, $color)
+    font-size: $size
+    color: $color
+
+// 定位居中
+PosCenter()
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+
+// 背景图片地址和大小
+backImg($url, $width = 100% , $height = 100%)  
+    background-image url($url)
+    background-repeat no-repeat
+    background-size $width, $height
+
+//定位全屏 调用方法 allCover()
+allCover()
+    position: absolute
+    top: 0
+    right: 0
+    
+
