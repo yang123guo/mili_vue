@@ -37,7 +37,9 @@ export default [
       },
 
       // 404页面
-      { path: '*', component: NotFoundComponent }
+    {   path: '*', 
+        component: component : resolve => require(['../views/notFound/404'], resolve)
+    }
 
 ];
 
