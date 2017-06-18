@@ -36,5 +36,8 @@ export default [
         component : resolve => require(['../views/mine/me'], resolve)
       },
 
+      // 404页面
+      { path: '*', component: NotFoundComponent }
+
 ];
 

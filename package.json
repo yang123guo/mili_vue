@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "better-scroll": "^0.2.4",
+    "fastclick": "^1.0.6",
     "vue": "^2.1.0",
     "vue-axios": "^1.2.2",
     "vue-infinite-scroll": "^2.0.0",

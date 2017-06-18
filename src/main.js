@@ -3,16 +3,22 @@ import VueRouter from 'vue-router';
 import store from './store/store.js' 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-
-
 import routes from './router/router.js';
 import App from './App'
 
-
+import './common/rem';  // 引入rem单位
+import FastClick from 'fastclick' // 引入解决点击延迟问题
 
 Vue.config.debug = true  //开启debug模式
 window.log = console.log
 
+
+// 注册FastClick事件
+if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+}
 
 Vue.use(VueAxios, axios)
 Vue.use(VueRouter)
