@@ -73,7 +73,7 @@ const scrollBehavior = (to, from, savedPosition) => {
  */
 
 
-export {
+export default{
     routers,
     scrollBehavior
 }

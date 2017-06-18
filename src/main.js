@@ -26,8 +26,9 @@ if ('addEventListener' in document) {
     }, false);
 }
 
-Vue.use(VueAxios, axios)
-Vue.use(VueRouter)
+
+// 同时 use 多个插件 被依赖的插件应放在偏后方
+Vue.use(VueAxios, axios, vuex, VueRouter)
 
 import 'assets/css/common.css';
 
