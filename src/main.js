@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 import store from './store/store.js' 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+/*以上是从node_modules引入的包*/
+
 import routes from './router/router.js';
 import App from './App'
 
@@ -34,17 +36,11 @@ import 'assets/css/common.css';
   listenEvents: [ 'scroll' ]
 })*/
 
+
 const router = new VueRouter({
     routes,
     linkActiveClass: 'custom-active',  
     mode : 'history',
-    scrollBehavior (to, from, savedPosition) {
-      if (savedPosition) {
-        return savedPosition
-      } else {
-        return { x: 0, y: 0 }
-      }
-    }
 })
 
 

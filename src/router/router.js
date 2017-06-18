@@ -1,7 +1,7 @@
 import Home from '../views/home/home'
 
 
-export default [
+const routers =  [
       {
         path : '/',
         component : Home
@@ -43,3 +43,31 @@ export default [
 
 ];
 
+/**
+ * @method 记录滚动条位置
+ * @param  {String}  to [目的路由]  
+ *         {String}  from [来源路由]  
+ *         {Object}  savedPosition [位置对象]
+ * @return {Object} 
+ */
+const scrollBehavior = (to, from, savedPosition) => {
+    if (savedPosition) {
+        return savedPosition
+    }else {
+        const position = {}
+        if (to.hash) {
+            position.selector = to.hash
+        }
+        if (to.matched.some(m => m.meta.scrollToTop)) {
+            position.x = 0
+            position.y = 0
+        }
+            return position
+    }
+}
+
+export {
+    baseUrl,
+    routerMode,
+    imgBaseUrl
+}
